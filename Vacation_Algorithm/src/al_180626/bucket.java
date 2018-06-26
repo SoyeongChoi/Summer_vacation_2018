@@ -51,36 +51,52 @@ public class bucket {
 				boolean a1 = true;
 				boolean a2 = true;
 				boolean a3 = true;
+				int count = 0;
 				for(int i = 0 ; i < temp.length; i++){
 					if (temp[i] == '('){
 						s1.push('(');
+						count++;
 					}
 					else if(temp[i] == ')'){
 						if(!s1.empty()){
 							s1.pop();
 							Answer++;
-						}else{
-							a1 = false;
+							count = 0;
+						}
+					}else if (count != 0){
+						if(!s1.empty()){
+							s1.pop();
+							count = 0;
 						}
 					}
 					if(temp[i] == '{'){
 						s2.push('{');
+						count++;
 					}else if(temp[i] == '}'){
 						if(!s2.empty()){
 							s2.pop();
 							Answer++;
-						}else{
-							a2 = false;
+							count = 0;
+						}
+					}else if (count != 0){
+						if(!s2.empty()){
+							s2.pop();
+							count = 0;
 						}
 					}
 					if(temp[i]=='['){
 						s3.push('[');
+						count++;
 					}else if(temp[i] == ']'){
 						if(!s3.empty()){
 							s3.pop();
 							Answer++;
-						}else{
-							a3 = false;
+							count = 0;
+						}
+					}else if (count != 0){
+						if(!s3.empty()){
+							s3.pop();
+							count = 0;
 						}
 					}
 				}
