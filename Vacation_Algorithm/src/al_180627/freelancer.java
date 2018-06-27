@@ -52,7 +52,7 @@ class freelancer {
 			}
 			int reference[] = new int[N+1];
 			reference[0]= 0;
-			reference[1] = Math.max(p.get(0), q.get(0));
+			reference[1] = Math.max(p.get(1), q.get(1));
 			for (int i = 2; i <= N; i++) {
 				reference[i] = Math.max(reference[i-1]+p.get(i), reference[i-2]+q.get(i));
 			}
