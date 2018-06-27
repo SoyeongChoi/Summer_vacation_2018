@@ -38,7 +38,7 @@ public class bucket {
 		int T = sc.nextInt();
 		for(int test_case = 0; test_case < T; test_case++) {
 
-			// Answer = 0;
+			 Answer = 0;
 			/////////////////////////////////////////////////////////////////////////////////////////////
 				String a = sc.next();
 				Stack<Character> s1 = new Stack<Character>();
@@ -53,7 +53,7 @@ public class bucket {
 				boolean a3 = true;
 				int count = 0;
 				for(int i = 0 ; i < temp.length; i++){
-					if (temp[i] == '('){
+					if (temp[i] == '('){		
 						s1.push('(');
 						count++;
 					}
@@ -62,10 +62,14 @@ public class bucket {
 							s1.pop();
 							Answer++;
 							count = 0;
+						}else{
+							a1 = false;
 						}
 					}else if (count != 0){
 						if(!s1.empty()){
-							s1.pop();
+							while(!s1.empty()){								
+								s1.pop();
+							}
 							count = 0;
 						}
 					}
@@ -77,10 +81,14 @@ public class bucket {
 							s2.pop();
 							Answer++;
 							count = 0;
+						}else{
+							a2 = false;
 						}
 					}else if (count != 0){
 						if(!s2.empty()){
-							s2.pop();
+							while(!s2.empty()){								
+								s2.pop();
+							}
 							count = 0;
 						}
 					}
@@ -92,10 +100,14 @@ public class bucket {
 							s3.pop();
 							Answer++;
 							count = 0;
+						}else{
+							a3 = false;
 						}
 					}else if (count != 0){
 						if(!s3.empty()){
-							s3.pop();
+							while(!s3.empty()){								
+								s3.pop();
+							}
 							count = 0;
 						}
 					}
