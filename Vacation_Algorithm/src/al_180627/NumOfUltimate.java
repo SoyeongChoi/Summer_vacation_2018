@@ -1,11 +1,8 @@
 package al_180627;
 /*
 You should use the statndard input/output
-
 in order to receive a score properly.
-
 Do not use file input and output
-
 Please be very careful. 
 */
 
@@ -55,11 +52,11 @@ class NumOfUltimate {
 				temp += a.get(i);
 			}
 			/////////////////////////////////////////////////////////////////////////////////////////////
-			Answer = Integer.parseInt(temp);
+
 
 			// Print the answer to standard output(screen).
 			System.out.println("Case #"+(test_case+1));
-			System.out.println(Answer);
+			System.out.println(temp);
 		}
 	}
 }
