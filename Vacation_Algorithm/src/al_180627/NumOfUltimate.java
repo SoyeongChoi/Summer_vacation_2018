@@ -40,8 +40,7 @@ class NumOfUltimate {
 			// Answer = 0;
 			int N = sc.nextInt();
 			ArrayList<Character> a = new ArrayList<Character>();
-			while(N != 0 ){
-					
+			while(N != 0 ){				
 					if(N%2 == 1){
 						a.add('4');
 					}else{						
@@ -55,9 +54,8 @@ class NumOfUltimate {
 			for(int i = 0; i <a.size(); i++){
 				temp += a.get(i);
 			}
-			System.out.println(temp);
 			/////////////////////////////////////////////////////////////////////////////////////////////
-
+			Answer = Integer.parseInt(temp);
 
 			// Print the answer to standard output(screen).
 			System.out.println("Case #"+(test_case+1));
